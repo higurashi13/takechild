@@ -25,7 +25,7 @@ $result = mysqli_query($conn, "SELECT * FROM topic");
     <div class="row">
 
         <nav class="col-md-3" style="
-    height: 1200px">
+    height: 1201px">
           <ol class="nav nav-pills nav-stacked">
           <?php
           while( $row = mysqli_fetch_assoc($result)){
