@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>궁전나루</title>
+
+            <meta property="og:title" content="궁전나루">
+            <meta property="og:image" content="/Booksprites_11.png">
+            <meta property="og:url" content="/castlenaru/test">
+            <meta property="og:description" content="궁전 온라인 마켓">
+            <meta property="og:type" content="website">
+
+        <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
+
+        <link rel="stylesheet" type="text/css" href="/takecare/style.css">
+
+        <link href="/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      #upmenu {
+        margin: 0 auto;
+        width: 1000px;
+      }
+      #keyfield {
+        margin-bottom: 8px;
+        border: none;
+      }
+      #menu2logo{
+        height: 50px;
+        bottom: solid;
+      }
+      #keyfield2{
+        border:none;
+        padding:none;
+        margin-top: 20px;
+      }
+      #keyfield3{
+        margin-top: 20px;
+      }
+      .top-slide{
+        margin:0 auto;
+        margin-top:10px;
+        width: 1020px;
+      }
+      /*#test,#test2,#test3 {
+        height: 450px;
+      }*/
+      #test{
+        height:450px;
+      }
+    </style>
+
+    <script type="text/javascript">
+ function check(){
+  if(document.search.keyWord.value==''){
+   alert('검색어를 입력하세요');
+   document.search.keyWord.focus();
+   return false;
+  }
+ }
+    </script>
+  </head>
+  <body>
+    <div class="upmenu">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="" class="navbar-brand easysLogo">Castle Naru</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse" id='upmenu'>
+        <ul class="nav navbar-nav">
+          <li><a href="">공지사항</a></li>
+          <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown">목록<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="">성</a></li>
+              <li><a href="">홍</a></li>
+              <li><a href="">구</a></li>
+              <li><a href="">어</a></li>
+              </ul>
+          </li>
+        <li><a href="">게시판</a></li>
+        <li><a href="">자료실</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container" id="headerLogo">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-3"><a href="#"><img src="/takecare/logo2.gif" id="menu2logo"></a></div>
+    <div class="col-md-4">
+      <form name = "search" method = "get" action ="a.jsp" onsubmit="return check()">
+      <!-- onsubmit은 이벤트 핸들러다 결국 자바스크립트에 대한 이벤트의 처리는 body에있는 form에서 하게된다.
+      따라서 이벤트 핸들러인 onsubmit을 이용해서 이벤트의 처리를 하며 onsubmit이 true값을 받으면 이벤트가
+      동작되고 false인 경우에는 이벤트가 작동하지 않는다.만약 전달되는 데이터가 없으면 true라고  간주해서
+      자동으로 동작하게 된다. 하지만 check()에서의 조건문에는 if문에 boolean값을 호출하도록 작성해야 한다. -->
+       <table width="200" border="0" align="center">
+        <tr>
+         <td align ="center" valign="bottom">
+          <select name="keyField" id="keyfield">
+           <option value="subject">통합검색</option>
+           <option value="writer">상품이름</option>
+           <option value="content">판매자</option>
+           </select>
+           </td>
+
+         <td>
+          <input type="text" size="30" name="keyWord" id="keyfield2">
+         </td>
+
+         <td>
+          <input type="submit" value="찾기" id="keyfield3">
+         </td>
+        </tr>
+       </table>
+      </form>
+    </div>
+
+
+  </div>
+</div>
+<div class="top-slide">
+  <div class="carousel slide" id="sellers_merchandise">
+    <ol class="carousel-indicators">
+      <li data-target="#sellers_merchandise" data-slide-to="0" class="active"></li>
+      <li data-target="#sellers_merchandise" data-slide-to="1"></li>
+      <li data-target="#sellers_merchandise" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" id="test">
+      <div class="item active">
+        <img src="/takecare/i1.jpg" id="test1">
+        <div class="carousel-caption">
+          <h1>시험1</h1>
+          <p>price per ratio</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/takecare/i2.jpg" id="test2">
+      <div class="carousel-caption">
+        <h1>시험2</h1>
+        <p>price per ratio</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/takecare/i4.jpg" id="test3">
+      <div class="carousel-caption">
+        <h1>시험3</h1>
+        <p>price per ratio</p>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#sellers_merchandise" data-slide="prev">
+    <span class="icon-prev">
+  </a>
+  <a class="right carousel-control" href="#sellers_merchandise" data-slide="next">
+    <span class="icon-next">
+  </a>
+  </div>
+</div>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+ <script src="/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
